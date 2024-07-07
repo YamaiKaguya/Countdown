@@ -1,5 +1,6 @@
 
 const play = document.querySelector('.playpause');
+
 const reset = document.querySelector('.reset');
 const display = document.querySelector('.countdown');
 
@@ -52,6 +53,7 @@ reset.addEventListener('click', function(event){
     play.style.backgroundColor = '#8bdaff';
     play.innerHTML = '<i class="fa-solid fa-play"></i>';
     currentStatus = false;
+    play.classList.add('playpause');
 
     display.innerHTML = `${formatTime(hour)}:${formatTime(min)}:${formatTime(sec)}`;
 });
